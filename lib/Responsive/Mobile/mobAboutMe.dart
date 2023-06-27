@@ -10,13 +10,13 @@ class mobAboutMe extends StatelessWidget {
       children: [
         Text(
           'About Me.',
-          style: GoogleFonts.exo2(fontSize: 45, color: Color(0xFFFF4C29), decoration: TextDecoration.none, fontWeight: FontWeight.w100),
+          style: GoogleFonts.exo2(fontSize: 45, color: Color(0xFFFF4C29), decoration: TextDecoration.none, fontWeight: FontWeight.w200),
         ),
         Container(
           height: 251,
           width: 476,
           padding: EdgeInsets.symmetric(horizontal: 15),
-          child: Image.asset('about.png'),
+          child: Image.asset('assets/about.png'),
         ),
         SizedBox(height: 5,),
         Container(
@@ -25,8 +25,8 @@ class mobAboutMe extends StatelessWidget {
           width: 550 ,
           height: 300,
           child: Text(
-            "Hello there, I am Shreyas, a passionate Flutter Developer, i am 21 year old and currently pursuing my Engineering Degree in Information Technology, I am Self tough flutter Developer and learning it more everyday",
-            style: GoogleFonts.exo2(fontSize: 25,color: Colors.white,decoration: TextDecoration.none,fontWeight: FontWeight.w100),
+            "Hello there, I am Shreyas, a passionate Flutter Developer, i am 21 year old and currently pursuing my Engineering Degree in Information Technology, I am a Self taught flutter Developer and learning it more everyday",
+            style: GoogleFonts.exo2(fontSize: 25,color: Colors.white,decoration: TextDecoration.none,fontWeight: FontWeight.w200),
           ),
         ),
       ],

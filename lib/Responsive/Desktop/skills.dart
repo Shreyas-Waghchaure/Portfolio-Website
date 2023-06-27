@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:protfolio_website/Widget/hoverWidget.dart';
 
 class Skills extends StatefulWidget {
   const Skills({Key? key}) : super(key: key);
@@ -11,12 +12,12 @@ class Skills extends StatefulWidget {
 class _SkillsState extends State<Skills> {
 
   final skills = const [
-    Image(image:  AssetImage('Flutter.png'),),
-    Image(image:  AssetImage('Dart.png'),),
-    Image(image:  AssetImage('firebase.png'),),
-    Image(image:  AssetImage('Github.png'),),
-    Image(image:  AssetImage('java.png'),),
-    Image(image:  AssetImage('figma.png'),),
+    Image(image:  AssetImage('assets/Flutter.png'),),
+    Image(image:  AssetImage('assets/Dart.png'),),
+    Image(image:  AssetImage('assets/firebase.png'),),
+    Image(image:  AssetImage('assets/Github.png'),),
+    Image(image:  AssetImage('assets/java.png'),),
+    Image(image:  AssetImage('assets/figma.png'),),
 
   ];
 
@@ -32,7 +33,7 @@ class _SkillsState extends State<Skills> {
         children: [
           Text(
             'Skills.',
-            style: GoogleFonts.exo2(fontSize: 45, color: Color(0xFFFF4C29), decoration: TextDecoration.none, fontWeight: FontWeight.w100),
+            style: GoogleFonts.exo2(fontSize: 45, color: Color(0xFFFF4C29), decoration: TextDecoration.none, fontWeight: FontWeight.w200),
           ),
           const SizedBox(height: 20.0),
           SizedBox(
@@ -59,10 +60,15 @@ class _SkillsState extends State<Skills> {
     );
   }
   Widget SkillsCard(skills){
-    return Container(
-      height: 150,
-      width: 250,
-      child: skills,
+    return OnHover(
+      builder: (isHovered){
+        return Container(
+        height: 150,
+        width: 250,
+        child: skills,
+        );
+      },
+
     );
   }
 }

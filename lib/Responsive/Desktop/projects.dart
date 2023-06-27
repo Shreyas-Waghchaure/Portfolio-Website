@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:protfolio_website/Widget/hoverWidget.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Projects extends StatefulWidget {
@@ -18,9 +19,9 @@ class _ProjectsState extends State<Projects> {
         Center(
             child: Text(
           'Projects.',
-          style: GoogleFonts.exo2(fontSize: 45, color: Color(0xFFFF4C29), decoration: TextDecoration.none, fontWeight: FontWeight.w100),
+          style: GoogleFonts.exo2(fontSize: 45, color: const Color(0xFFFF4C29), decoration: TextDecoration.none, fontWeight: FontWeight.w200),
         )),
-        SizedBox(
+        const SizedBox(
           height: 50,
         ),
         Row(
@@ -30,7 +31,7 @@ class _ProjectsState extends State<Projects> {
             projectCard('News App','A Tech News app which shows technology related news using rest api','https://github.com/Shreyas-Waghchaure/News-App'),
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: 30,
         ),
         Row(
@@ -55,47 +56,50 @@ class _ProjectsState extends State<Projects> {
     }
     return Expanded(
       child: Container(
-        margin: EdgeInsets.all(35),
-
+        margin: const EdgeInsets.all(45),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(25),
-          color: Color(0xFF0A2940),
+          color: const Color(0xFF0A2940),
         ),
         child:Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 width: 555,
                 child: Text(
                   title,
-                  style: GoogleFonts.exo2(fontSize: 25, color: Color(0xFFFF4C29), decoration: TextDecoration.none, fontWeight: FontWeight.w100),
+                  style: GoogleFonts.exo2(fontSize: 25, color: const Color(0xFFFF4C29), decoration: TextDecoration.none, fontWeight: FontWeight.w200),
                 ),
               ),
               Container(
                 width: 465,
-                padding: EdgeInsets.only(left: 25),
+                padding: const EdgeInsets.only(left: 25),
                 child: Text(
                   desc,
-                  style: GoogleFonts.exo2(fontSize: 22, color: Colors.white, decoration: TextDecoration.none, fontWeight: FontWeight.w100),
+                  style: GoogleFonts.exo2(fontSize: 22, color: Colors.white, decoration: TextDecoration.none, fontWeight: FontWeight.w200),
                 ),
               ),
-              SizedBox(height: 70,),
+              const SizedBox(height: 70,),
               Center(
                 child: GestureDetector(
                   onTap: (){
                     _launchURL(Url);
                   },
-                  child: Container(
-                    margin: EdgeInsets.only(bottom: 20),
-                    width: 200,
-                    height: 50,
-                    decoration: BoxDecoration(color: Color(0xFFFF4C29), borderRadius: BorderRadius.circular(15)),
-                    child: Center(
-                        child: Text(
-                      'View More',
-                      style: GoogleFonts.exo2(fontSize: 22, color: Colors.white, decoration: TextDecoration.none, fontWeight: FontWeight.w100),
-                    )),
+                  child: OnHover(
+                    builder: (isHovered) {
+                      return Container(
+                        margin: const EdgeInsets.only(bottom: 20),
+                        width: 200,
+                        height: 50,
+                        decoration: BoxDecoration(color: const Color(0xFFFF4C29), borderRadius: BorderRadius.circular(15)),
+                        child: Center(
+                            child: Text(
+                              'View More',
+                              style: GoogleFonts.exo2(fontSize: 22, color: Colors.white, decoration: TextDecoration.none, fontWeight: FontWeight.w200),
+                            )),
+                      );
+                    },
                   ),
                 ),
               ),

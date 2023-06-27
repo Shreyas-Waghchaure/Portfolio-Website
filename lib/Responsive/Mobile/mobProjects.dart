@@ -12,7 +12,7 @@ class mobProjects extends StatelessWidget {
         Center(
             child: Text(
               'Projects.',
-              style: GoogleFonts.exo2(fontSize: 45, color: Color(0xFFFF4C29), decoration: TextDecoration.none, fontWeight: FontWeight.w100),
+              style: GoogleFonts.exo2(fontSize: 45, color: Color(0xFFFF4C29), decoration: TextDecoration.none, fontWeight: FontWeight.w200),
             )),
         SizedBox(
           height: 25,
@@ -49,7 +49,7 @@ class mobProjects extends StatelessWidget {
               width: 555,
               child: Text(
                 title,
-                style: GoogleFonts.exo2(fontSize: 25, color: Color(0xFFFF4C29), decoration: TextDecoration.none, fontWeight: FontWeight.w100),
+                style: GoogleFonts.exo2(fontSize: 25, color: Color(0xFFFF4C29), decoration: TextDecoration.none, fontWeight: FontWeight.w200),
               ),
             ),
             Container(
@@ -57,7 +57,7 @@ class mobProjects extends StatelessWidget {
               padding: EdgeInsets.only(left: 25),
               child: Text(
                 desc,
-                style: GoogleFonts.exo2(fontSize: 22, color: Colors.white, decoration: TextDecoration.none, fontWeight: FontWeight.w100),
+                style: GoogleFonts.exo2(fontSize: 22, color: Colors.white, decoration: TextDecoration.none, fontWeight: FontWeight.w200),
               ),
             ),
             SizedBox(height: 70,),
@@ -74,7 +74,7 @@ class mobProjects extends StatelessWidget {
                   child: Center(
                       child: Text(
                         'View More',
-                        style: GoogleFonts.exo2(fontSize: 22, color: Colors.white, decoration: TextDecoration.none, fontWeight: FontWeight.w100),
+                        style: GoogleFonts.exo2(fontSize: 22, color: Colors.white, decoration: TextDecoration.none, fontWeight: FontWeight.w200),
                       )),
                 ),
               ),

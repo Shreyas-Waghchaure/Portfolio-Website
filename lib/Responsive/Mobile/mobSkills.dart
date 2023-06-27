@@ -12,12 +12,12 @@ class _mobSkillsState extends State<mobSkills> {
 
 
   final skills = const [
-    Image(image:  AssetImage('Flutter.png'),),
-    Image(image:  AssetImage('Dart.png'),),
-    Image(image:  AssetImage('firebase.png'),),
-    Image(image:  AssetImage('Github.png'),),
-    Image(image:  AssetImage('java.png'),),
-    Image(image:  AssetImage('figma.png'),),
+    Image(image:  AssetImage('assets/Flutter.png'),),
+    Image(image:  AssetImage('assets/Dart.png'),),
+    Image(image:  AssetImage('assets/firebase.png'),),
+    Image(image:  AssetImage('assets/Github.png'),),
+    Image(image:  AssetImage('assets/java.png'),),
+    Image(image:  AssetImage('assets/figma.png'),),
   ];
 
   @override
@@ -32,7 +32,7 @@ class _mobSkillsState extends State<mobSkills> {
         children: [
           Text(
             'Skills.',
-            style: GoogleFonts.exo2(fontSize: 45, color: Color(0xFFFF4C29), decoration: TextDecoration.none, fontWeight: FontWeight.w100),
+            style: GoogleFonts.exo2(fontSize: 45, color: Color(0xFFFF4C29), decoration: TextDecoration.none, fontWeight: FontWeight.w200),
           ),
           const SizedBox(height: 30.0),
           SizedBox(
